@@ -14,18 +14,24 @@ https://coolors.co
 :root {
     
     /*COLORS*/
+    --darkest-gray: rgba(28, 28, 28, 1);
+    --dark-blue: rgba(39, 53, 73, 1);
+    --mid-blue: rgba(47, 62, 83, 1);
+    --grass-green: rgba(16, 185, 129, 1);
+    --light-gray: rgba(213, 212, 216, 1);
+    --white: rgba(236, 253, 245, 1);
   
     
     /*BORDER RADIUS*/
-    --br-soft: 1rem;
+    --br-soft: .25rem;
     --br-round: 50%;
     
     /*FONT SIZES*/
-    --fs-xs: 1rem;
-    --fs-s: 1.25rem;
-    --fs-m: 1.5rem;
-    --fs-l: 2.25rem;
-    --fs-title: 2.5rem;
+    /* --fs-xs: 1rem; */
+    --fs-s: 1rem;
+    --fs-m: 1.25rem;
+    --fs-l: 2.5rem;
+    /* --fs-title: 2.5rem; */
 }
 
 /****** MARGIN AND PADDING RESET ******/
@@ -37,3 +43,84 @@ https://coolors.co
 }
 
 /******* GLOBAL STYLES *******/
+
+body {
+    
+    background-color: var(--darkest-gray);
+    text-align: left;
+    
+}
+
+h1 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 800;
+    font-size: var(--fs-l);
+    color: var(--white);
+}
+
+span {
+    display: block;
+    color: var(--grass-green);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+    margin-bottom: .625rem;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--light-gray);
+    font-size: var(--fs-m);
+    margin-bottom: 3rem;
+}
+
+hr {
+    max-width: 450px;
+    margin-bottom: 2.2rem;
+}
+
+
+/****** MAIN CONTAINER ******/
+
+.main-container {
+    max-width: 550px;
+    background-color: var(--dark-blue);
+    padding: 1rem 3.25rem;
+    margin: 1rem;
+}
+
+/****** BUTTON STYLING ******/
+
+.generate-btn {
+    width: 200px;
+    font-family: 'Inter', sans-serif;
+    font-size: var(--fs-s);
+    color: var(--white);
+    background-color: var(--grass-green);
+    padding: .75rem .25rem;
+    margin-bottom: 2.2rem;
+    border: none;
+    border-radius: var(--br-soft);
+}
+
+/****** PW FIELD STYLING ******/
+
+p {
+    width: 211px;
+    height: 40px;
+    border-radius: var(--br-soft);
+    background-color: var(--mid-blue);
+}
+
+footer {
+    margin-bottom: 7rem;
+    
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    
+}
