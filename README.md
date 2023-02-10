@@ -87,6 +87,11 @@ Check markup and accessibility
 
 ### Useful resources
 
+[Random password help](https://www.geeksforgeeks.org/how-to-generate-a-random-password-using-javascript/)
+
+For later:
+[Copy text to clipboard](https://www.w3schools.com/howto/howto_js_copy_clipboard.asp)
+
 
 ## Author
 

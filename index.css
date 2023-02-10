@@ -27,11 +27,9 @@ https://coolors.co
     --br-round: 50%;
     
     /*FONT SIZES*/
-    /* --fs-xs: 1rem; */
     --fs-s: 1rem;
     --fs-m: 1.25rem;
     --fs-l: 2.5rem;
-    /* --fs-title: 2.5rem; */
 }
 
 /****** MARGIN AND PADDING RESET ******/
@@ -48,6 +46,8 @@ body {
     
     background-color: var(--darkest-gray);
     text-align: left;
+    display: flex;
+    justify-content: center;
     
 }
 
@@ -58,8 +58,7 @@ h1 {
     color: var(--white);
 }
 
-span {
-    display: block;
+.heading {
     color: var(--grass-green);
 }
 
@@ -80,18 +79,36 @@ h2 {
 
 hr {
     max-width: 450px;
+    color: var(--mid-blue);
     margin-bottom: 2.2rem;
+}
+
+@media (max-width: 500px) {
+
+    body {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: var(--fs-s);
+    }
 }
 
 
 /****** MAIN CONTAINER ******/
 
 .main-container {
-    max-width: 550px;
+    min-width: 300px;
     background-color: var(--dark-blue);
     padding: 1rem 3.25rem;
     margin: 1rem;
 }
+
+
 
 /****** BUTTON STYLING ******/
 
@@ -107,20 +124,46 @@ hr {
     border-radius: var(--br-soft);
 }
 
+.copy-one, .copy-two {
+    width: 150px;
+    font-family: 'Inter', sans-serif;
+    font-size: var(--fs-s);
+    color: var(--white);
+    background-color: var(--grass-green);
+    padding: .75rem .25rem;
+    margin-bottom: .5rem;
+    border: none;
+    border-radius: var(--br-soft);
+}
+
 /****** PW FIELD STYLING ******/
 
 p {
     width: 211px;
     height: 40px;
+    color: var(--grass-green);
+    border: none;
     border-radius: var(--br-soft);
     background-color: var(--mid-blue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
     margin-bottom: 7rem;
-    
+ 
     display: flex;
     flex-direction: row;
-    gap: 2rem;
-    
+    gap: 1rem;
+
+}
+
+@media (max-width: 500px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
