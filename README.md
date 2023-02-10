@@ -87,6 +87,8 @@ Check markup and accessibility
 
 ### Useful resources
 
+(https://scrimba.com/scrim/co9d34e7a92d4ccfd5d3999ee)
+
 [Random password help](https://www.geeksforgeeks.org/how-to-generate-a-random-password-using-javascript/)
 
 For later:

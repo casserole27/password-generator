@@ -3,16 +3,18 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
 "~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
 
-let pwOne = 0;
-let pwTwo = 0; 
+let pwOne = "";
+let pwTwo = "";
 
 let pwElOne = document.getElementById("pw-one");
 let pwElTwo = document.getElementById("pw-two");
 
-let btn = document.getElementById("generate-btn")
-
+let btn = document.getElementById("generate-btn");
 
 btn.addEventListener("click", function() {
+    
+    pwElOne.textContent = pwOne = "";
+    pwElTwo.textContent  = pwTwo = "";
 
   for (let i = 0; i < 16; i++){
 
@@ -25,7 +27,3 @@ btn.addEventListener("click", function() {
         pwElTwo.textContent = pwTwo += characters[charTwo];
    }  
 });
-
-
-
-//How to generate a password each time instead of keep going?
