@@ -94,6 +94,8 @@ Check markup and accessibility
 
 (https://scrimba.com/scrim/co9d34e7a92d4ccfd5d3999ee)
 
+(https://webdesign.tutsplus.com/tutorials/build-a-configurable-random-password-generator-with-javascript--cms-93262)
+
 [Random password help](https://www.geeksforgeeks.org/how-to-generate-a-random-password-using-javascript/)
 
 For later:

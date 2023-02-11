@@ -1,15 +1,15 @@
-const charactersGroup = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
+const charGroup = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
 "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-const numbersGroup =  ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-const symbolsGroup = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
+const numGroup =  ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const symGroup = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
 
 //TEXT INPUT FIELDS
 const resultOne = document.getElementById("result-one");
 const resultTwo = document.getElementById("result-two");
 
 //RANGE INPUT FIELD
-const pwLength = document.getElementById("length");
-const pwLengthResult = document.getElementById("length-result");
+const inputRange = document.getElementById("pw-length"); // RANGE
+const pwLengthResult = document.getElementById("length-result"); // RANGE TEXT
 
 //CHECKBOX FIELDS
 const inclNumbers = document.getElementById("numbers");
@@ -20,75 +20,48 @@ let generateBtn = document.getElementById("generate");
 let copyPwOne = document.getElementById("copy-one");
 let copyPwTwo = document.getElementById("copy-two");
 
-//!GENERATE RANDOM CHARACTERS
+//! LISTEN FOR RANGE INPUT FOR PASSWORD LENGTH
+inputRange.addEventListener("input", function() {
+  pwLengthResult.textContent = inputRange.value;
+});
 
-let pwOne = "";
-let pwTwo = "";
 
-//! LISTEN FOR PASSWORD RANGE CHANGE
-pwLength.addEventListener("change", function(e) {
-  pwLengthResult.textContent = e.target.value;
-})
-
+//! CLICK GENERATE PASSWORD BUTTON
 generateBtn.addEventListener("click", function() {
-    
-    resultOne.value = pwOne = "";
-    resultTwo.value  = pwTwo = "";
+ 
+  resultOne.value = "";
+  resultTwo.value = "";
 
-    const length = pwLength.value;
-    const numbers = inclNumbers.checked;
-    const symbols = inclSymbols.checked;
-        //! use .value when it is an input field, instead of .textContent
-    resultOne.value = generatePasswordOne(numbers, symbols, length)
-    resultTwo.value = generatePasswordTwo(numbers, symbols, length)
-
-  });  
-
-  function generatePasswordOne(number, symbol, length) {
-   
-    let variationsCount = [number, symbol].length;
+  let pw = charGroup;
+ 
+  //? https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
   
-    for (let i = 0; i < length; i += variationsCount){
-      if (number) {
-        let num = Math.floor(Math.random() * numbersGroup.length)
-        pwOne += numbersGroup[num];
-      }
-      if (symbol) {
-        let sym = Math.floor(Math.random() * symbolsGroup.length)
-        pwOne += symbolsGroup[sym];
-      }
-      let char = Math.floor(Math.random() * charactersGroup.length)
-      pwOne += charactersGroup[char];
+  if (inclNumbers.checked) {
+    // if numbers checkbox is checked, .concat() combines pw/char array with number checkbox
+    pw = pw.concat(numGroup); 
+  };
 
-      // const finalPasswordOne = pwOne.slice(0, length);
+  if (inclSymbols.checked) {
+    // if symbols checkbox is checked, .concat() combines pw/char array with symbol checkbox
+    pw = pw.concat(symGroup) 
+  };
 
-      return pwOne
-   }  
-};
+  //iterate based on length of input range selection
+  for (let i = 0; i < inputRange.value; i++) {
 
-function generatePasswordTwo(number, symbol, length) {
+    let randomCharOne = Math.floor(Math.random() * pw.length);
+    console.log(randomCharOne)
+    let randomCharTwo = Math.floor(Math.random() * pw.length);
+    resultOne.value += pw[randomCharOne];
 
-  let variationsCount = [number, symbol].length;
+    //assigns value to text input field
+    // += adds a random value based on input selections every iteration / length of range
+    
+    resultTwo.value += pw[randomCharTwo];
 
-  for (let i = 0; i < length; i += variationsCount){
-    if (number) {
-      let num = Math.floor(Math.random() * numbers.length)
-      pwTwo += numbers[num];
-    }
-    if (symbol) {
-      let sym = Math.floor(Math.random() * symbols.length)
-      pwTwo += symbols[sym];
-    }
-    let char = Math.floor(Math.random() * characters.length)
-    pwTwo += characters[char];
+  };
 
-    // const finalPasswordOne = pwOne.slice(0, length);
-
-    return pwTwo;
-   }  
-};
-
-
+});
 
 
 
@@ -117,3 +90,6 @@ generateBtn.addEventListener("click", function() {
    }  
 });
 */
+
+//! GENERATE RANDOM NUMBER BASED ON LENGTH OF CHARACTERS ARRAY LENGTH
+//! += CHARACTER WITH RANDOM INDEX
