@@ -29,6 +29,11 @@ Stretch goals
 - add copy-on-click
 - toggle "symbols" and "numbers" on and off
 
+Personal stretch goals
+- responsive
+- "generate passwords" button resets to generate new passwords every time it is clicked, 
+instead of making reset button / function
+
 
  ### Screenshot
 

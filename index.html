@@ -46,8 +46,37 @@
         <footer id="footer-container">    
 
             <!-- ! Should these be inputs? -->
-            <p class="pw-el-one" id="pw-one"></p>
-            <p class="pw-el-two" id="pw-two"></p>
+            <div class="pw-container">
+                <input type="text" id="result-one">
+                <button class="copy-pw-one" id="copy-one">Copy</button>
+            </div>
+
+            <div class="pw-container">
+                <input type="text" id="result-two">
+                <button class="copy-pw-two" id="copy-two">Copy</button>
+            </div>
+
+            <div class="input-group">
+                <label>Password length (8 - 20)</label>
+                <input type="range" id="length" min="8" max="20" step="1">
+                <span id="length-result">10</span>
+            </div>
+            
+            <div class="checkbox-group">
+            <div class="input-group">
+                <label>Include numbers</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+
+            <div class="input-group">
+                <label>Include symbols</label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+            </div>
+            
+        
+            <!-- <p class="pw-el-one" id="pw-one"></p> -->
+            <!-- <p class="pw-el-two" id="pw-two"></p> -->
         
         </footer>
 
