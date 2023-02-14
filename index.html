@@ -31,13 +31,13 @@
 
         <header>   
 
-            <h1>Generate a
-            <div class="heading">random password</div>
+            <h1 class="title">Generate a
+            <div class="title-color">random password</div>
             </h1>
 
         </header>
 
-        <h2>Never use an insecure password again.</h3>
+        <h2 class="subtitle">Never use an insecure password again.</h3>
 
         <button class="generate-btn" id="generate">Generate passwords</button>    
 
@@ -56,10 +56,12 @@
                 <button class="copy-pw-two" id="copy-two">Copy</button>
             </div>
 
-            <div class="input-group">
+            <div class="range-group">
                 <label>Password length (8 - 20)</label>
+                <div class="range-container">
                 <input type="range" id="pw-length" min="8" max="20" step="1">
                 <span id="length-result"></span>
+                </div>
             </div>
             
             <div class="checkbox-group">

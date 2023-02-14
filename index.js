@@ -63,6 +63,41 @@ generateBtn.addEventListener("click", function() {
 
 });
 
+//! COPY PASSWORDS TO CLIPBOARD
+
+copyPwOne.addEventListener("click", function() {
+  let copyText = resultOne;
+  copyText.select();
+  navigator.clipboard.writeText(copyText.value);
+  
+  const alert = document.createElement("div");
+  alert.classList.add("alert");
+  alert.textContent = "Copied to clipboard";
+  document.body.appendChild(alert);
+  
+  setTimeout(function() {
+    document.querySelector(".alert").style.display = "none";
+    document.body.removeChild(alert);
+  }, 1000);
+  return resultOne;
+});
+
+copyPwTwo.addEventListener("click", function() {
+  let copyText = resultTwo;
+  copyText.select();
+  navigator.clipboard.writeText(copyText.value);
+
+  const alert = document.createElement("div");
+  alert.classList.add("alert");
+  alert.textContent = "Copied to clipboard";
+  document.body.appendChild(alert);
+   
+  setTimeout(function() {
+    document.querySelector(".alert").style.display = "none";
+    document.body.removeChild(alert);
+  }, 1000);
+  return resultTwo;
+});
 
 
 //! OG CODE WITH P INSTEAD OF INPUT

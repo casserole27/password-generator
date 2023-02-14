@@ -16,6 +16,8 @@
 
 ### Overview
 
+Scrimba Module 3 solo project: Password Generator
+
 
 ### The challenge
 
@@ -37,11 +39,14 @@ instead of making reset button / function
 
  ### Screenshot
 
+ ![Screenshot-desktop](/images/screenshot-desktop.png)
+ ![Screenshot-mobile](/images/screenshot-mobile.png)
+
 ### Links
 
-- Scrim: [Scrim](https://scrimba.com/scrim/co66f4672bc42a373fbd1968f)
-- Github: [Github](https://github.com/casserole27/counter-app)
-- Live Site: [Live Site](https://www.clewisdev.com/counter-app/)
+- Scrim: [Scrim]()
+- Github: [Github](https://github.com/casserole27/password-generator)
+- Live Site: [Live Site](https://www.clewisdev.com/password-generator/)
 
 ## My process
 
@@ -82,8 +87,11 @@ Check markup and accessibility
 
 ### Built with
 
+- [Figma Design](https://www.figma.com/file/Kr6KbuePZa2BNgepo86fhd/Random-Password-Generator-(New-version)-(Copy)?node-id=0%3A1&t=XAg6Ub6YeB5oQOiH-0) 
 - CSS custom properties
+- CSS flexbox
 - Responsive Web Design
+- JavaScript
 
 ### What I learned
 
@@ -92,14 +100,11 @@ Check markup and accessibility
 
 ### Useful resources
 
-(https://scrimba.com/scrim/co9d34e7a92d4ccfd5d3999ee)
+[Scrimba hint](https://scrimba.com/scrim/co9d34e7a92d4ccfd5d3999ee)
 
-(https://webdesign.tutsplus.com/tutorials/build-a-configurable-random-password-generator-with-javascript--cms-93262)
-
-[Random password help](https://www.geeksforgeeks.org/how-to-generate-a-random-password-using-javascript/)
-
-For later:
+[Google - PW generator tutorial](https://webdesign.tutsplus.com/tutorials/build-a-configurable-random-password-generator-with-javascript--cms-93262)
 [Copy text to clipboard](https://www.w3schools.com/howto/howto_js_copy_clipboard.asp)
+[Random password help](https://www.geeksforgeeks.org/how-to-generate-a-random-password-using-javascript/)
 
 
 ## Author
@@ -109,6 +114,9 @@ For later:
 
 
 ## Acknowledgments
+
+[Andy Leverenz](https://web-crunch.com/)
+[W3 Schools](https://www.w3schools.com/) 
 
 
 

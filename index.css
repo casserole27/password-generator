@@ -5,8 +5,8 @@ Date: February 2023
 */
 
 /*
-COOLORS color palette link
-https://coolors.co
+fIGMA WIREFRAME
+https://www.figma.com/file/NEj9JDycMjF3XKXq7swoc9/Random-Password-Generator-(New-version)?node-id=0%3A1&t=mtfU5pinaRfZOJS2-0
 */
 
 /****** VARIABLES ******/
@@ -44,10 +44,10 @@ https://coolors.co
 /******* GLOBAL STYLES *******/
 
 body {
-    
     background-color: var(--darkest-gray);
     text-align: left;
-    margin-top: 6rem;
+    margin-top: 2rem;
+    
     display: flex;
     justify-content: center;
     
@@ -60,16 +60,11 @@ h1 {
     color: var(--white);
 }
 
-.heading {
+/****** DIV TO CHANGE TEXT COLOR ******/
+.title-color {
     color: var(--grass-green);
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    margin-top: 7rem;
-    margin-bottom: .625rem;
-}
 
 h2 {
     font-family: 'Inter', sans-serif;
@@ -93,19 +88,29 @@ hr {
 
     body {
         text-align: center;
+        margin-top: 0;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     h2 {
-        font-size: var(--fs-s);
+        font-size: 1rem;
+        padding: .25rem 2rem;
+        margin-bottom: 1rem;
     }
 }
 
 
 /****** MAIN CONTAINER ******/
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+    margin-bottom: .625rem;
+}
 
 .main-container {
     min-width: 300px;
@@ -114,6 +119,15 @@ hr {
     margin: 1rem;
 }
 
+@media (max-width: 500px) {
+    header {
+        margin-top: 2rem;
+    }
+
+    .main-container {
+        padding: .5rem;
+    }
+}
 
 
 /****** BUTTON STYLING ******/
@@ -131,23 +145,27 @@ hr {
     border-radius: var(--br-soft);
 }
 
-/****** INPUT FIELD STYLING ******/
 
-#result-two {
-    margin-bottom: 1.5rem;
-}
+/****** GLOBAL INPUT FIELD STYLING ******/
+
 .pw-container, .input-group {
     margin-bottom: 1rem;
+} 
+
+label, span {
+    font-family: 'Inter', sans-serif;
+    color: var(--grass-green);
+    padding: .5rem;
 }
 
 input[type="text"] {
-    width: 211px;
+    width: 200px;
     height: 40px;
     accent-color: var(--purple);
     color: var(--grass-green);
     font-weight: 900;
     text-align: center;
-    margin-right: .5rem;
+    margin-right: .25rem;
     border: none;
     border-radius: var(--br-soft);
     background-color: var(--mid-blue);
@@ -158,22 +176,39 @@ input[type="range"], input[type="checkbox"] {
     accent-color: var(--purple);
 }
 
+/****** COPY BUTTON STYLING ******/
+
 .copy-pw-one, .copy-pw-two {
-    width: 75px;
+    width: 60px;
     font-family: 'Inter', sans-serif;
-    font-size: var(--fs-s);
+    font-size: var(--fs-xs);
     color: var(--darkest-gray);
     background-color: var(--grass-green);
-    padding: .5rem 1rem;
+    padding: .5rem;
     border: none;
     border-radius: var(--br-soft);
+
+    text-align: center;
 }
 
-label, span {
-    font-family: 'Inter', sans-serif;
-    color: var(--grass-green);
+
+/****** RANGE FIELD STYLING ******/
+
+.range-group{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+#pw-length {
     padding: .5rem;
 }
+
+.range-container {
+    display: flex;
+}
+
+/****** CHECKBOX FIELDS STYLING ******/
 
 .checkbox-group {
     background-color: var(--mid-blue);
@@ -186,6 +221,23 @@ label, span {
     margin-bottom: 5rem;
 }
 
+@media (max-width: 500px) {
+    .checkbox-group{
+        padding: .5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .range-group {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/****** FOOTER - ALL INPUTS ******/
+
 footer {
     display: flex;
     flex-direction: column;
@@ -193,32 +245,24 @@ footer {
 }
 
 
-/* p {
-    width: 211px;
-    height: 40px;
-    color: var(--grass-green);
-    border: none;
-    border-radius: var(--br-soft);
-    background-color: var(--mid-blue);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer {
-    margin-bottom: 7rem;
- 
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-
-} */
-
 @media (max-width: 500px) {
     footer {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+}
+
+/****** ALERT ******/
+
+.alert { /*! FOR JAVASCRIPT */
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--purple);
+    color: var(--darkest-gray);
+    font-size: var(--fs-m);
+    padding: 1rem;
+    border-radius: var(--br-soft);
 }
