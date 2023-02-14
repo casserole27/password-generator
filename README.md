@@ -91,12 +91,55 @@ Check markup and accessibility
 - CSS custom properties
 - CSS flexbox
 - Responsive Web Design
-- JavaScript
+- vanilla JavaScript
 
 ### What I learned
 
+- I really wanted to do the stretch goals and I didn't know how, so I did a lot of piecing together from Google, MDN Webdocs, and W3 Schools. Interested to see how I did in the code review.
+
+- Best practice: interactive elements on a page should usually be some kind of input. I originally coded the password fields as paragraph tags when they should have been inputs.
+
+- This was a major leap forward to me regarding how to work with forms in JavaScript.
+```javascript
+    resultTwo.value += pw[randomCharTwo];
+```
+- Use .value for any input field instead of .textContent
+
+- Custom alert: best practice?
+```css
+.alert { /*! FOR JAVASCRIPT */
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--purple);
+    color: var(--darkest-gray);
+    font-size: var(--fs-m);
+    padding: 1rem;
+    border-radius: var(--br-soft);
+}
+```
+```javascript
+  //! create a div and add it to the document
+  const alert = document.createElement("div");
+  //! add the alert class and text
+  alert.classList.add("alert");
+  alert.textContent = "Copied to clipboard";
+   //! add alert element to the body as child node 
+  document.body.appendChild(alert);
+  
+  setTimeout(function() {
+    //! remove the alert from the document after 1000ms
+      document.body.removeChild(alert);
+  }, 1000);
+  return resultOne;
+```
+
 ### Continued development
 
+- Accessibility of project
+- Copy text from clipboard - curious about site permissions
+- Custom alert best practice
 
 ### Useful resources
 
@@ -106,6 +149,13 @@ Check markup and accessibility
 [Copy text to clipboard](https://www.w3schools.com/howto/howto_js_copy_clipboard.asp)
 [Random password help](https://www.geeksforgeeks.org/how-to-generate-a-random-password-using-javascript/)
 
+
+[.concat() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
+[.select() method](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select)
+[Copy text to clipboard](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/clipboard)(https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText)
+[.createElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
+[.appendChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+[setTimeout()](https://www.w3schools.com/jsref/met_win_settimeout.asp)
 
 ## Author
 

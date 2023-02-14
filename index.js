@@ -1,3 +1,5 @@
+
+//CHARACTER ARRAYS
 const charGroup = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
 "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 const numGroup =  ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -20,13 +22,13 @@ let generateBtn = document.getElementById("generate");
 let copyPwOne = document.getElementById("copy-one");
 let copyPwTwo = document.getElementById("copy-two");
 
-//! LISTEN FOR RANGE INPUT FOR PASSWORD LENGTH
+// LISTEN FOR RANGE INPUT FOR PASSWORD LENGTH
 inputRange.addEventListener("input", function() {
   pwLengthResult.textContent = inputRange.value;
 });
 
 
-//! CLICK GENERATE PASSWORD BUTTON
+// CLICK GENERATE PASSWORD BUTTON 
 generateBtn.addEventListener("click", function() {
  
   resultOne.value = "";
@@ -37,16 +39,16 @@ generateBtn.addEventListener("click", function() {
   //? https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
   
   if (inclNumbers.checked) {
-    // if numbers checkbox is checked, .concat() combines pw/char array with number checkbox
+    //! if numbers checkbox is checked, .concat() combines pw/char array with number checkbox
     pw = pw.concat(numGroup); 
   };
 
   if (inclSymbols.checked) {
-    // if symbols checkbox is checked, .concat() combines pw/char array with symbol checkbox
+    //! if symbols checkbox is checked, .concat() combines pw/char array with symbol checkbox
     pw = pw.concat(symGroup) 
   };
 
-  //iterate based on length of input range selection
+  //!iterate based on length of input range selection
   for (let i = 0; i < inputRange.value; i++) {
 
     let randomCharOne = Math.floor(Math.random() * pw.length);
@@ -54,8 +56,8 @@ generateBtn.addEventListener("click", function() {
     let randomCharTwo = Math.floor(Math.random() * pw.length);
     resultOne.value += pw[randomCharOne];
 
-    //assigns value to text input field
-    // += adds a random value based on input selections every iteration / length of range
+    //!assigns value to text input field
+    //! += adds a random value based on input selections every iteration / length of range
     
     resultTwo.value += pw[randomCharTwo];
 
@@ -63,21 +65,26 @@ generateBtn.addEventListener("click", function() {
 
 });
 
-//! COPY PASSWORDS TO CLIPBOARD
-
+// COPY PASSWORDS TO CLIPBOARD
 copyPwOne.addEventListener("click", function() {
   let copyText = resultOne;
+  //! .select() method selects text from an input field
   copyText.select();
+  //! writes to system clipboard
+  //? site permissions? https://developer.mozilla.org/en-US/docs/Web/API/Navigator/clipboard
   navigator.clipboard.writeText(copyText.value);
-  
+
+  //! create a div and add it to the document
   const alert = document.createElement("div");
+  //! add the alert class and text
   alert.classList.add("alert");
   alert.textContent = "Copied to clipboard";
+   //! add alert element to the body as child node 
   document.body.appendChild(alert);
   
   setTimeout(function() {
-    document.querySelector(".alert").style.display = "none";
-    document.body.removeChild(alert);
+    //! remove the alert from the document after 1000ms
+      document.body.removeChild(alert);
   }, 1000);
   return resultOne;
 });
@@ -93,14 +100,14 @@ copyPwTwo.addEventListener("click", function() {
   document.body.appendChild(alert);
    
   setTimeout(function() {
-    document.querySelector(".alert").style.display = "none";
     document.body.removeChild(alert);
   }, 1000);
   return resultTwo;
 });
 
 
-//! OG CODE WITH P INSTEAD OF INPUT
+//? ORIGINAL CODE WITH P INSTEAD OF INPUT
+//* INPUTS ARE BEST PRACTICE
 
 // let pwElOne = document.getElementById("pw-one");
 // let pwElTwo = document.getElementById("pw-two");
@@ -126,5 +133,6 @@ generateBtn.addEventListener("click", function() {
 });
 */
 
+/******* MAIN IDEA ******/
 //! GENERATE RANDOM NUMBER BASED ON LENGTH OF CHARACTERS ARRAY LENGTH
 //! += CHARACTER WITH RANDOM INDEX
