@@ -18,7 +18,7 @@ https://www.figma.com/file/NEj9JDycMjF3XKXq7swoc9/Random-Password-Generator-(New
     --dark-blue: rgba(39, 53, 73, 1);
     --mid-blue: rgba(47, 62, 83, 1);
     --purple: rgb(184, 113, 224);
-    --grass-green: rgb(22, 170, 121);
+    --grass-green: #22E2A2;
     --light-gray: rgba(213, 212, 216, 1);
     --white: rgba(236, 253, 245, 1);
   
@@ -60,7 +60,7 @@ h1 {
     color: var(--white);
 }
 
-/****** DIV TO CHANGE TEXT COLOR ******/
+/****** DIV TO CHANGE PART OF HEADING TEXT COLOR ******/
 .title-color {
     color: var(--grass-green);
 }
@@ -236,7 +236,7 @@ input[type="range"], input[type="checkbox"] {
 }
 
 
-/****** FOOTER - ALL INPUTS ******/
+/****** FOOTER - CONTAINS ALL INPUTS ******/
 
 footer {
     display: flex;
@@ -244,14 +244,6 @@ footer {
     align-items: center;
 }
 
-
-@media (max-width: 500px) {
-    footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
 /****** ALERT ******/
 
@@ -266,3 +258,16 @@ footer {
     padding: 1rem;
     border-radius: var(--br-soft);
 }
+
+/****** HIDE LABELS FOR TEXT INPUT FIELDS ******/
+
+ .hidden {
+    position: absolute;
+    clip-path: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+  } 

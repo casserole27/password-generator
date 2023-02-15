@@ -44,9 +44,9 @@ instead of making reset button / function
 
 ### Links
 
-- Scrim: [Scrim]()
-- Github: [Github](https://github.com/casserole27/password-generator)
-- Live Site: [Live Site](https://www.clewisdev.com/password-generator/)
+- [Scrim](https://scrimba.com/scrim/co89b4c52a995b9674453af92)
+- [Github](https://github.com/casserole27/password-generator)
+- [Live Site](https://www.clewisdev.com/password-generator/)
 
 ## My process
 
@@ -88,6 +88,7 @@ Check markup and accessibility
 ### Built with
 
 - [Figma Design](https://www.figma.com/file/Kr6KbuePZa2BNgepo86fhd/Random-Password-Generator-(New-version)-(Copy)?node-id=0%3A1&t=XAg6Ub6YeB5oQOiH-0) 
+- Modified Figma wireframe to account for additional input fields
 - CSS custom properties
 - CSS flexbox
 - Responsive Web Design
@@ -156,6 +157,9 @@ Check markup and accessibility
 [.createElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
 [.appendChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
 [setTimeout()](https://www.w3schools.com/jsref/met_win_settimeout.asp)
+
+
+[clip-path](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
 
 ## Author
 

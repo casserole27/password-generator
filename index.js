@@ -1,4 +1,3 @@
-
 //CHARACTER ARRAYS
 const charGroup = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
 "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
@@ -28,6 +27,9 @@ inputRange.addEventListener("input", function() {
 });
 
 
+//??? I got an accessibility error check that not all of my inputs are able to be activated by a keyboard (specifically the range)
+//??? What do you do besides "click" on an event listener to make sure the keyboard can be used as well?
+
 // CLICK GENERATE PASSWORD BUTTON 
 generateBtn.addEventListener("click", function() {
  
@@ -36,8 +38,9 @@ generateBtn.addEventListener("click", function() {
 
   let pw = charGroup;
  
-  //? https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
-  
+  //??? .concat(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+  //??? Is this the best way?
+
   if (inclNumbers.checked) {
     //! if numbers checkbox is checked, .concat() combines pw/char array with number checkbox
     pw = pw.concat(numGroup); 
@@ -71,7 +74,7 @@ copyPwOne.addEventListener("click", function() {
   //! .select() method selects text from an input field
   copyText.select();
   //! writes to system clipboard
-  //? site permissions? https://developer.mozilla.org/en-US/docs/Web/API/Navigator/clipboard
+  //??? site permissions to use clipboard? Is this secure? https://developer.mozilla.org/en-US/docs/Web/API/Navigator/clipboard
   navigator.clipboard.writeText(copyText.value);
 
   //! create a div and add it to the document
@@ -106,7 +109,7 @@ copyPwTwo.addEventListener("click", function() {
 });
 
 
-//? ORIGINAL CODE WITH P INSTEAD OF INPUT
+//! ORIGINAL CODE I WROTE WITH P INSTEAD OF INPUT
 //* INPUTS ARE BEST PRACTICE
 
 // let pwElOne = document.getElementById("pw-one");

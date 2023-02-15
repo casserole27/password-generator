@@ -42,32 +42,34 @@
         <footer id="footer-container">    
 
             <div class="pw-container">
-                <input type="text" id="result-one">
+                <label class="hidden" for="btn-one">Password One</label>
+                <input type="text" id="result-one" name="btn-one">
                 <button class="copy-pw-one" id="copy-one">Copy</button>
             </div>
 
             <div class="pw-container">
-                <input type="text" id="result-two">
+                <label class="hidden" for="">Password One</label>
+                <input type="text" id="result-two" name="btn-two">
                 <button class="copy-pw-two" id="copy-two">Copy</button>
             </div>
 
             <div class="range-group">
-                <label>Password length (8 - 20)</label>
+                <label for="length">Password length (8 - 20)</label>
                 <div class="range-container">
-                <input type="range" id="pw-length" min="8" max="20" step="1">
+                <input type="range" id="pw-length" min="8" max="20" step="1" name="length">
                 <span id="length-result"></span>
                 </div>
             </div>
             
             <div class="checkbox-group">
             <div class="input-group">
-                <label>Include numbers</label>
-                <input type="checkbox" id="numbers" checked>
+                <label for="check-one">Include numbers</label>
+                <input type="checkbox" id="numbers" name="check-one" checked>
             </div>
 
             <div class="input-group">
-                <label>Include symbols</label>
-                <input type="checkbox" id="symbols" checked>
+                <label for="check-two">Include symbols</label>
+                <input type="checkbox" id="symbols" name="check-two" checked>
             </div>
             </div>
             
