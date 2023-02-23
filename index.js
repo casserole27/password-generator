@@ -44,18 +44,19 @@ generateBtn.addEventListener("click", function() {
   if (inclNumbers.checked) {
     //! if numbers checkbox is checked, .concat() combines pw/char array with number checkbox
     pw = pw.concat(numGroup); 
+    // pw += numGroup;
   };
 
   if (inclSymbols.checked) {
     //! if symbols checkbox is checked, .concat() combines pw/char array with symbol checkbox
-    pw = pw.concat(symGroup) 
+    pw = pw.concat(symGroup);
+    // pw += symGroup;
   };
 
   //!iterate based on length of input range selection
   for (let i = 0; i < inputRange.value; i++) {
 
     let randomCharOne = Math.floor(Math.random() * pw.length);
-    console.log(randomCharOne)
     let randomCharTwo = Math.floor(Math.random() * pw.length);
     resultOne.value += pw[randomCharOne];
 
@@ -109,33 +110,3 @@ copyPwTwo.addEventListener("click", function() {
 });
 
 
-//! ORIGINAL CODE I WROTE WITH P INSTEAD OF INPUT
-//* INPUTS ARE BEST PRACTICE
-
-// let pwElOne = document.getElementById("pw-one");
-// let pwElTwo = document.getElementById("pw-two");
-
-/*
-generateBtn.addEventListener("click", function() {
-    
-    resultOne.textContent = pwOne = "";
-    resultTwo.textContent  = pwTwo = "";
-
-        for (let i = 0; i < 16; i++){
-
-        let charOne = Math.floor(Math.random() * characters.length);
-
-
-        //! use .value when it is an input field, instead of .textContent
-        resultOne.value = pwOne += characters[charOne];
-        
-        let charTwo = Math.floor(Math.random() * characters.length);
-        
-        resultTwo.value = pwTwo += characters[charTwo];
-   }  
-});
-*/
-
-/******* MAIN IDEA ******/
-//! GENERATE RANDOM NUMBER BASED ON LENGTH OF CHARACTERS ARRAY LENGTH
-//! += CHARACTER WITH RANDOM INDEX
